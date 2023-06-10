@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios </title>
+</head>
+
+<script>
+    /*
+    Exercícios
+a) Peça duas notas, em seguida realize a média e informe se o aluno está
+aprovado ou reprovado. Para essa atividade, o aluno precisa ter média 7 ou
+mais para ser considerado aprovado.
+
+(Variável contendo a média)
+
+var media = 7
+
+(variável contendo as faltas)
+
+** var faltas = 5 
+
+(condicional)
+
+if(media>=7 && ) {
+document.writer("Aprovado")
+
+}else{
+document.write("Reprovado")
+
+*/
+    var media = 7
+    var nota1 = 6.5
+    var nota2 = 8.5
+    if (nota1 >= media || nota2 >= media) {
+        document.write("Aprovado")
+    } else {
+        document.write("Reprovado")
+    }
+    document.write("   <br>    ")
+    /*
+    
+    b) O usuário informa dois valores numéricos, se forem iguais deverão ser
+    somados, caso contrário multiplicados.
+    */
+    var valor1 = 8
+    var valor2 = 10
+
+    if (valor1 == valor2) {
+        document.write(valor1 + valor2)
+    } else {
+        document.write(valor1 * valor2)
+    }
+
+    document.write("  <br>  ")
+    /*
+    
+    c) Haverá uma lista com três produtos que uma lanchonete vende, o usuário
+    precisa informar o código do produto, em seguida o valor pago por ele. Nosso
+    sistema precisa retornar o troco que deve ser dado ao cliente, valide caso o
+    cliente informe um pagamento inferior ao valor do pedido.
+    
+    Código Pedido Valor
+    1 Pizza R$ 12,00
+    2 Pão de Queijo R$ 4,00
+    3 Macarrão R$ 16,00
+*/
+    var pizza = 12
+    var hamburguer = 16
+    var pastel = 4
+    var pagamento = 20
+    var codigopizza = 1
+    var codigohamburguer = 2
+    var codigopastel = 3
+    var codigoproduto = 1
+
+    if (codigoproduto == codigopizza && pagamento >= pizza) {
+        document.write(pagamento - pizza)
+    } else if (codigoproduto == codigohamburguer && pagamento >= pagamento) {
+        document.write(pagamento - hamburguer)
+    } else if (codigoproduto == codigopastel && pagamento >= pastel) {
+        document.write(pagamento - pastel)
+    }
+
+    document.write("  <br>  ")
+    /*
+    d) Peça para o usuário informar três números, em seguida exiba o menor deles.
+*/
+    var numero1 = 10
+    var numero2 = 15
+    var numero3 = 20
+
+    if (numero1 < numero2 && numero1 < numero3) {
+        document.write(numero1)
+    } else if (numero2 < numero1 && numero2 < numero3) {
+        document.write(numero2)
+    } else if (numero3 < numero1 && numero3 < numero2) {
+        document.write(numero3)
+    }
+
+    document.write("    <br>    ")
+    /*
+    e) O usuário deverá informar a largura de cada lado de um triângulo, peça as
+    três larguras (direito, inferior e esquerdo) e verifique o tipo de triângulo. Os
+    tipos e triângulos são:
+    /*
+    var direito = 10
+    var inferito = 15
+    var esquerdo = 10
+    /*
+Tipo Especificação:
+
+        Isósceles Dois lados iguais e um diferente: ok 
+    var direito = 10
+    var inferito = 15
+    var esquerdo = 10
+        Equilátero Três lados iguais: 
+    var direito = 10
+    var inferito = 10
+    var esquerdo = 10
+        Escaleno Três lados diferentes: 
+     var direito = 10
+    var inferito = 15
+    var esquerdo = 20     
+    */
+    var direito = 15
+    var inferito = 10
+    var esquerdo = 15
+    if (direito == inferito && direito != esquerdo || inferito == esquerdo && inferito != direito || esquerdo == direito && esquerdo != inferito) {
+        document.write("Isósceles Dois lados iguais e um diferente")
+
+    } else if (direito == inferito && direito == esquerdo || inferito == direito && inferito == esquerdo || esquerdo == direito && esquerdo == inferito) {
+        document.write("Equilátero Três lados iguais:")
+        document.write("   :    ")
+    } else { document.write(" Escaleno Três lados diferentes") }
+    document.write(" <br> ")
+    /*
+    var produto = prompt("Digite o nome do produto (pizza, hamburguer, pastel)");
+    switch (produto) {
+        case "pizza":
+            var valorPago = prompt("Digite o valor pago")
+            document.writeln("Troco: " + (valorPago - 12))
+            break;
+        case "hamburguer":
+            var valorPago = prompt("Digite o valor pago")
+            document.writeln("Troco: " + (valorPago - 20))
+            break;
+        case "pastel":
+            var valorPago = prompt("Digite o valor pago")
+            document.writeln("Troco: " + (valorPago - 8))
+            break;
+        default:
+            document.writeln("Esse produto não consta em estoque")
+            break;
+    }
+    // Celsius para Fahrenheit: F = C * 1.8 + 32
+    // Fahrenheit para Celsius: C = (F - 32) * 1.8
+    Exercícios
+    a) O usuário informa uma temperatura, em seguida poderá selecionar o tipo de
+    conversão (Celsius e Fahrenheit).
+    */
+    var temperatura = 30
+    var tipodeConversao = "Celsius"
+    // Celsius para Fahrenheit: F = C * 1.8 + 32
+    switch (tipodeConversao) {
+        case "Celsius":
+            document.write("Teperatura =   ")
+            document.write("<br>")
+
+            document.write(temperatura * 1.8 + 32)
+            document.write("<br>")
+            document.write("valor convertido:  ")
+            document.write("<br>")
+
+            break;
+        // Fahrenheit para Celsius: C = (F - 32) * 1.8
+        case "Fahrenheit":
+            document.write("teperatura=")
+
+            document.write((temperatura - 32) * 1.8)
+
+
+
+            break;
+
+        default:
+            break;
+    }
+
+    /*
+    b) Crie um conversor de moedas. Será informado o valor e as conversões:
+    ○ Real para Dólar:
+    ○ Dólar para Real:
+    ○ Real para Euro:
+    ○ Euro para Real:
+    */
+    var dolar = 5.00
+    var euro = 5.25
+    var valor = 1000.00
+
+    var moeda = prompt("Digite o nome da moeda (dolar, euro, real)");
+
+
+    switch (moeda) {
+
+        case "dolar":
+
+            document.write(valor / dolar)
+    }
+    switch (moeda) {
+        case "euro":
+            document.write(valor / euro)
+    }
+    /*
+ c) O usuário informa o nome de um produto, valor e segmento (vestuário,
+    eletrônico ou alimentício). Se o segmento for vestuário será dado 5% de
+    desconto sobre o valor do produto, caso eletrônico 8% e alimentício 10%.
+
+   var produto = prompt("Digite o nome do produto (pizza, hamburguer, pastel)");
+    switch (produto) {
+        case "pizza":
+            var valorPago = prompt("Digite o valor pago")
+            document.writeln("Troco: " + (valorPago - 12))
+
+    var blusa = 100.00 = 5%
+    var celular = 500.00 = 8%
+    var pastel = 10.00
+    var valorpago = 120.00 =10%
+*/
+    var blusa = 100.00
+    var celular = 500.00
+    var pastel = 10.00
+    var valorpago = 120.00
+
+    var produto = prompt("Digite o nome do produto (blusa, celular, pastel)");
+    switch (produto) {
+        case "blusa":
+            document.write("<br>")
+            var valorPago = prompt("Digite o valor pago")
+            var desconto = valorPago * 0.05
+            document.writeln("Total: " + (valorPago - desconto))
+        case "celular":
+            document.write("<br>")
+            var valorPago = prompt("Digite o valor pago")
+            var desconto = valorPago * 0.08
+            document.writeln("Total: " + (valorPago - desconto))
+
+        case "pastel":
+            document.write("<br>")
+            var valorPago = prompt("Digite o valor pago")
+            var desconto = valorPago * 0.10
+            document.writeln("Total: " + (valorPago - desconto))
+
+            document.write("<br>")
+    }
+
+
+
+
+    /*
+   d) Crie um sistema de votação para três candidatos. O eleitor poderá selecionar
+   um dos três nomes, em seguida será contabilizado o voto para o candidato.
+   */
+  var candidato= genoveva
+  var candidato= gertrudes
+  var candidato= teobaldo
+
+                                        
+   /*                                     
+   e) O usuário informa o horário atual no Brasil (apenas hora), em seguida
+     informa um país. Retorne o horário daquele país se baseando pela hora
+     informada. Cadastre ao menos três países diferentes
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        */
+
+
+</script>
+
+
+<body>
+
+</body>
+
+</html>
